@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>This will create a new user</title>
+    <title>This will update a user by Patch</title>
     <link rel="shortcut icon" href="favicon.ico">
 
 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -40,7 +40,7 @@
         <span class="breadcrumbs">
             <a href="index.html" class="breadcrumbs">Home</a>
 
-            > This will create a new user
+            > This will update a user by Patch
         </span>
         </div>
         <div class="rightbg"></div>
@@ -91,10 +91,10 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-exclamation-triangle error-icon fa-3x' title='ERROR'></i></span>
                             <span class="test-case-title">
-                                    <span class="success-color">
-                                    This Will Create A New User
+                                    <span class="error-color">
+                                    This Will Update A User By Patch
                                         <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -127,79 +127,75 @@
                 <tr class="step-table-separator">
                     <td colspan="5"></td>
                 </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-ERROR">
                     <td width="60" class="step-icon">
                         <a name="0"/>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
-                               style="display:block">
-                                <i class="fa fa-plus-square-o imgstepSection0 success-icon"
-                                   style="margin-left: 20px; float:left;  padding-right:5px"></i>
-                            </a>
+                            <span style="margin-left: 20px; margin-right: 5px;"
+                                  class="top-level-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
-                               style="display:block;">
-                            <span class="top-level-step">Creating user with name:John9877,job:Programmer69570</span>
-                            </a>
+                            <span class="top-level-step">Update User name : &lt;null&gt;, Job: John9877_updatedbyPut_updatedbyPatch</span>
 
                         </div>
                     </td>
-                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">2.44s</span></td>
+                    <td width="100"><span class="top-level-step">ERROR</span></td>
+                    <td width="100"><span class="top-level-step">0s</span></td>
                 </tr>
-                    <tr>
-                    <td colspan="5">
-                    <table id="stepSection0" style="display:none; width:100%">
-
-                <tr class="test-SUCCESS">
-                    <td width="60" class="step-icon">
-                        
-                            <span style="margin-left: 40px; margin-right: 5px;"
-                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
-                    </td>
-                    <td>
-                        <div class="step-description">
-                            <span class="nested-group-step">POST https://reqres.in/api/users</span>
-
-                                <span class="rest-query">
-                <span>
-                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal"
-                            data-target="#restModal-2">
-                        REST Query
+                    <tr class="test-ERROR">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="4" class="error-message-cell">
+                            <div class="error-message ellipsis"
+                                 title='Illegal argument exception: parameterValue cannot be null'>
+                                <pre>Illegal argument exception: parameterValue cannot be null</pre>
+                            </div>
+                <div><!-- Stack trace -->
+                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#stacktraceModal-1">
+                        View stack trace
                     </button>
-                </span>
+                </div>
                 <!-- Modal -->
-                <div class="modal fade" id="restModal-2" tabindex="-1" role="dialog"
-                     aria-labelledby="restModalLabel" aria-hidden="true">
+                <div class="modal fade" id="stacktraceModal-1" tabindex="-1" role="dialog"
+                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal"
                                         aria-label="Close"><span aria-hidden="true">&times;</span>
                                 </button>
-                                <h4 class="modal-title" id="restModalLabel">
-                                POST https://reqres.in/api/users
+                                <h4 class="modal-title" id="stacktraceModalLabel">
+                                java.lang.IllegalArgumentException
                                 </h4>
                             </div>
                             <div class="modal-body">
-                                    <p>Status code: 201</p>
-                                    <p>Content Type: application/json</p>
-                                    <h5>Request Headers</h5>
-                                    <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
-                                    <h5>Content Body</h5>
-                                    <pre>{<br>    &quot;name&quot;: &quot;John9877&quot;,<br>    &quot;job&quot;: &quot;Programmer69570&quot;,<br>    &quot;email&quot;: null,<br>    &quot;password&quot;: null<br>}</pre>
-                                    <h5>Request Cookies</h5>
-                                    <pre></pre>
-                                    <h5>Response Headers</h5>
-                                    <pre>Date: Mon, 06 Jun 2022 22:11:44 GMT<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 122<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;7a-U4NIGSPRlU4oGv9WBaFCHGlVuso&quot;<br>Via: 1.1 vegur<br>CF-Cache-Status: DYNAMIC<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=otSPbpJEWtKrtcpvawVmy5cAKZWm9n463J9URZ7tD%2FqiooWk1SHmQ1CBxi1uy6ru2FWdjOUYQp0zTLAb3ny7Gb7WfPSBE4uObgSRMgRW3mDRHaNlasJmzvrRDHc%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 71747c487eee769b-LHR<br>alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400</pre>
-                                <h5>Response Body</h5>
-                                    <pre>
-                                        {<br>    &quot;name&quot;: &quot;John9877&quot;,<br>    &quot;job&quot;: &quot;Programmer69570&quot;,<br>    &quot;email&quot;: null,<br>    &quot;password&quot;: null,<br>    &quot;id&quot;: &quot;539&quot;,<br>    &quot;createdAt&quot;: &quot;2022-06-06T22:11:44.112Z&quot;<br>}
-                                    </pre>
-                                    <h5>Response Cookies</h5>
-                                    <pre></pre>
+                                    <h5>parameterValue cannot be null</h5>
+                                io.restassured.internal.assertion.AssertParameter.notNull(AssertParameter.groovy
+                                    :26) <br>
+                                io.restassured.internal.RequestSpecificationImpl.pathParameter(RequestSpecificationImpl.groovy
+                                    :560) <br>
+                                groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java
+                                    :325) <br>
+                                groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java
+                                    :1213) <br>
+                                groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java
+                                    :1022) <br>
+                                groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java
+                                    :810) <br>
+                                io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy
+                                    :-1) <br>
+                                io.restassured.internal.RequestSpecificationImpl.pathParam(RequestSpecificationImpl.groovy
+                                    :578) <br>
+                                net.serenitybdd.rest.decorators.request.RequestSpecificationParametersConfigurations.pathParam(RequestSpecificationParametersConfigurations.java
+                                    :188) <br>
+                                net.serenitybdd.rest.decorators.request.RequestSpecificationDecorated.pathParam(RequestSpecificationDecorated.java
+                                    :27) <br>
+                                in.reqres.reqresinfo.ReqresStep.updateUserByPatch(ReqresStep.java
+                                    :65) <br>
+                                in.reqres.reqresCURD.ReqresCURD.test005(ReqresCURD.java
+                                    :70) <br>
                             </div>
+
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">
                                     Close
@@ -208,21 +204,12 @@
                         </div>
                     </div>
                 </div>
-                                </span>
-
-                        </div>
-                    </td>
-                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">0s</span></td>
-                </tr>
-
-                    </table>
-                    </td>
-                    <tr>
-                <tr class="test-SUCCESS">
+                        </td>
+                    </tr>
+                <tr class="test-ERROR">
                     <td colspan="2"></td>
-                    <td width="100"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>2.57s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>ERROR</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>0.01s</em></span></td>
                 </tr>
 
             </table>

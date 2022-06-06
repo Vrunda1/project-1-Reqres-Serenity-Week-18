@@ -25,10 +25,10 @@ public class ReqresStep {
     }
 
     @Step("Getting the User information with Id: {0}")
-    public HashMap<String, ?> getUserInfoByName(String userId) {
+    public HashMap<String, Object> getUserInfoByName(String userId) {
 
 
-        HashMap<String, ?> userMap = SerenityRest.given().log().all()
+        HashMap<String, Object> userMap = SerenityRest.given().log().all()
                 .when()
                 .pathParam("userId", userId)
                 .get(EndPoints.GET_SINGLE_USER_BY_ID)
@@ -39,7 +39,7 @@ public class ReqresStep {
         return userMap;
     }
     @Step("Login User with email : {0}, password: {1}")
-    public  HashMap<String, ?> loginUser(String email,String password) {
+    public  HashMap<String, Object> loginUser(String email,String password) {
         ReqresPojo reqresPojo = new ReqresPojo();
         reqresPojo.setEmail(email);
         reqresPojo.setPassword(password);

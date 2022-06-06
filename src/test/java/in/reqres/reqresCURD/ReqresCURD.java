@@ -41,15 +41,15 @@ public class ReqresCURD extends TestBase {
     @Title("Verify that new user is added")
     @Test
     public void test002() {
-        HashMap<String, Object> userMap = (HashMap<String, Object>) reqresStep.getUserInfoByName(userId);
+        HashMap<String, Object> userMap =  reqresStep.getUserInfoByName(userId);
         Assert.assertThat(userMap, hasValue(name));
-        System.out.println(userMap);
+        System.out.println(userId);
     }
 
     @Title("This will login a user")
     @Test
     public void test003() {
-        HashMap<String, ?> tokenMap = reqresStep.loginUser(email, password);
+        HashMap<String, Object> tokenMap = reqresStep.loginUser(email, password);
         Assert.assertThat(tokenMap, hasKey("token"));
         System.out.println(tokenMap);
     }
@@ -69,6 +69,12 @@ public class ReqresCURD extends TestBase {
         name = name + "_updatedbyPatch";
         ValidatableResponse response = reqresStep.updateUserByPatch(userId, name, job);
         response.log().all().statusCode(200);
+    }
+    @Title("This will update a user by Patch")
+    @Test
+    public void test006() {
+        ValidatableResponse response = reqresStep.deleteUser(userId);
+        response.log().all().statusCode(204);
     }
 }
 
